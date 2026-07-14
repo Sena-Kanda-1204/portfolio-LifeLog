@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Log - add</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>イベント追加</h1>
+</header>
+
+<form class="form-area" onsubmit="return false;">
+
+    <label>タイトル</label>
+    <input type="text" id="title">
+
+    <label>日付</label>
+    <input type="date" id="date">
+
+    <label>説明</label>
+    <textarea id="description"></textarea>
+
+    <!-- ✅ moreボタン -->
+    <button type="button" id="toggleMore" class="more-btn">
+        more ▼
+    </button>
+
+    <!-- ✅ 深掘りエリア -->
+    <div id="moreSection" style="display:none;">
+
+        <h3>振り返り（深掘り）</h3>
+
+        <div class="form-group">
+            <label>何をしたか（行動）</label>
+            <textarea id="action"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>どう感じたか（感情）</label>
+            <textarea id="feeling"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>なぜそう感じたか</label>
+            <textarea id="reason"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>得たもの・学び</label>
+            <textarea id="learning"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>今の自分への影響</label>
+            <textarea id="impact"></textarea>
+        </div>
+
+        <hr>
+
+        <h3>就活用（ガクチカ）</h3>
+
+        <div class="form-group">
+            <label>課題</label>
+            <textarea id="problem"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>工夫・行動</label>
+            <textarea id="actionDetail"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>結果</label>
+            <textarea id="result"></textarea>
+        </div>
+
+        <hr>
+
+        <h3>価値観・性格</h3>
+
+        <div class="form-group">
+            <label>自分らしさが出た点</label>
+            <textarea id="strength"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>弱さ・課題</label>
+            <textarea id="weakness"></textarea>
+        </div>
+
+    </div>
+
+
+    <div class="location-box">
+        <label>場所</label>
+        <input type="text" id="location">
+        <button type="button" onclick="setCurrentLocation()">現在地取得</button>
+        <p id="locationStatus"></p>
+    </div>
+
+    <div class="emotion-form">
+        <label class="emotion-box"><input type="checkbox" value="成長"><span>成長</span></label>
+        <label class="emotion-box"><input type="checkbox" value="挑戦"><span>挑戦</span></label>
+        <label class="emotion-box"><input type="checkbox" value="達成感"><span>達成感</span></label>
+        <label class="emotion-box"><input type="checkbox" value="楽しい"><span>楽しい</span></label>
+        <label class="emotion-box"><input type="checkbox" value="安心"><span>安心</span></label>
+        <label class="emotion-box"><input type="checkbox" value="不安"><span>不安</span></label>
+        <label class="emotion-box"><input type="checkbox" value="緊張"><span>緊張</span></label>
+    </div>
+    
+    <label>始まり・終わり</label>
+    <select id="lifeStage">
+        <option value="">-----</option>
+        <option value="start">🚀 始まり</option>
+        <option value="end">🏁 終わり</option>
+    </select>
+
+    <div id="colorPickerBox" style="display:none;">
+        <label>背景色</label>
+
+        <div class="color-palette" id="colorPalette">
+
+            <div class="color-dot" data-color="#e3f2fd" style="background:#e3f2fd"></div>
+            <div class="color-dot" data-color="#e8f5e9" style="background:#e8f5e9"></div>
+            <div class="color-dot" data-color="#fff3e0" style="background:#fff3e0"></div>
+            <div class="color-dot" data-color="#fce4ec" style="background:#fce4ec"></div>
+            <div class="color-dot" data-color="#ede7f6" style="background:#ede7f6"></div>
+            <div class="color-dot" data-color="#f3e5f5" style="background:#f3e5f5"></div>
+            <div class="color-dot" data-color="#e0f2f1" style="background:#e0f2f1"></div>
+            <div class="color-dot" data-color="#fffde7" style="background:#fffde7"></div>
+            <div class="color-dot" data-color="#efebe9" style="background:#efebe9"></div>
+
+        </div>
+
+        <input type="hidden" id="bgColor">
+    </div>
+
+    <!-- ファイル -->
+    <div class="file-box">
+        <label>ファイル添付</label>
+        <input type="file" id="fileInput">
+        <p id="fileStatus"></p>
+    </div>
+
+    <div class="form-footer">
+        <button type="button" id="addBtn" onclick="addEvent()" disabled>追加</button>
+    </div>
+
+</form>
+
+<!-- FAB -->
+<a href="index.html" class="fab-button" aria-label="タイムラインへ戻る">
+    ←
+</a>
+
+<script src="js/dataManager.js"></script>
+<script src="js/add.js"></script>
+
+</body>
+</html>
