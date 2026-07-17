@@ -108,7 +108,7 @@ function deleteFromView() {
     DataManager.delete(window.currentViewId);
 
     // 一覧ページへ遷移
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
 
 // グローバル公開
