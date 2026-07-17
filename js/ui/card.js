@@ -132,7 +132,7 @@ function renderFile(file) {
 
 // カードクリック時に対応するイベントIDをURLパラメータとして渡し、詳細画面へ遷移する
 function openView(id) {
-    window.location.href = `../pages/cardView.html?id=${id}`;
+    window.location.href = `./pages/cardView.html?id=${id}`;
 }
 
 
