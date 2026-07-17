@@ -438,4 +438,3 @@ window.executeSearch = executeSearch;
 window.resetSearch = resetSearch;
 window.applySearchFromState = applySearchFromState;
 window.removeSearch = removeSearch;
-window.removeEmotion = removeEmotion;
