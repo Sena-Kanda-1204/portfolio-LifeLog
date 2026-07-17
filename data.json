@@ -1,0 +1,35 @@
+[
+  {
+    "isSample": true,
+
+    "id": "sample1",
+    "title": "初期データ：入学",
+    "date": "2020-04-01",
+    "description": "高校入学をして新しい環境での生活が始まった。",
+    "location": "学校",
+    "emotions": ["成長", "挑戦"],
+    "file": null
+  },
+  {
+    "isSample": true,
+
+    "id": "sample2",
+    "title": "初期データ：初めての文化祭",
+    "date": "2020-09-15",
+    "description": "クラスで出し物を企画し、協力して成功させた。",
+    "location": "学校",
+    "emotions": ["達成感", "楽しい", "成長"],
+    "file": null
+  },
+  {
+    "isSample": true,
+    
+    "id": "sample3",
+    "title": "初期データ：資格取得",
+    "date": "2021-02-10",
+    "description": "情報処理の資格試験に合格した。",
+    "location": "自宅",
+    "emotions": ["達成感", "成長"],
+    "file": null
+  }
+]
