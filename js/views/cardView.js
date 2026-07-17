@@ -98,16 +98,12 @@ async function init() {
 
 // 詳細ページからイベント削除を行う関数
 function deleteFromView() {
-
     if (!window.currentViewId) return;
 
-    // 確認ダイアログ
     if (!confirm("このイベントを削除しますか？")) return;
 
-    // データ削除
     DataManager.delete(window.currentViewId);
 
-    // 一覧ページへ遷移
     window.location.href = "../index.html";
 }
 
